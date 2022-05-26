@@ -14,7 +14,7 @@ public class StandardMazeBuilder implements MazeBuilder{
     @Override
     public void addRoom(Room room) {
         Arrays.stream(Direction.values())
-                .forEach(direction -> room.setSide(direction, new Wall()));
+                .forEach(direction -> room.setSide(direction, mazeFactory.createWall()));
         currentMaze.addRoom(room);
     }
 
