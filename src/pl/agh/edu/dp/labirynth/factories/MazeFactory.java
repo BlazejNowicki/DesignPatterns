@@ -4,7 +4,7 @@ import pl.agh.edu.dp.labirynth.components.Door;
 import pl.agh.edu.dp.labirynth.components.Room;
 import pl.agh.edu.dp.labirynth.components.Wall;
 
-public class MazeFactory {
+public abstract class MazeFactory {
     public Room createRoom(int roomNumber){
         return new Room(roomNumber);
     }

@@ -1,5 +1,7 @@
 package pl.agh.edu.dp.labirynth.components;
 
+import pl.agh.edu.dp.labirynth.enums.Direction;
+
 import java.util.Vector;
 
 public class Maze {
@@ -9,7 +11,7 @@ public class Maze {
         this.rooms = new Vector<Room>();
     }
 
-    public void addRoom(Room room){
+    public void addRoom(Room room) {
         rooms.add(room);
     }
 
@@ -17,8 +19,13 @@ public class Maze {
         this.rooms = rooms;
     }
 
-    public int getRoomNumbers()
-    {
+    public int getRoomNumbers() {
         return rooms.size();
+    }
+
+    public Room getEntry() {
+        if (rooms.size() > 0) return rooms.elementAt(0);
+        return null;
+
     }
 }

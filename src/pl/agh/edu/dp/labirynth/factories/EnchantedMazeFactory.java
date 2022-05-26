@@ -6,6 +6,17 @@ import pl.agh.edu.dp.labirynth.components.Room;
 import pl.agh.edu.dp.labirynth.components.Wall;
 
 public class EnchantedMazeFactory extends MazeFactory {
+    private static EnchantedMazeFactory instance;
+
+    private EnchantedMazeFactory() {
+    }
+
+    public static EnchantedMazeFactory getInstance() {
+        if (instance == null) {
+            instance = new EnchantedMazeFactory();
+        }
+        return instance;
+    }
 
     @Override
     public Room createRoom(int roomNumber) {
