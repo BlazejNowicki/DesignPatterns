@@ -1,3 +1,6 @@
+Tomasz Bochnak \
+Błażej Nowicki \
+Jakub Stępień
 # Wzorce projektowe I
 Implementacja wzorca Builder, Factory i Singleton
 
